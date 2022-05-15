@@ -1,0 +1,13 @@
+version: "4.8.1"
+
+services:
+  jupyter:
+    image: jupyter/scipy-notebook:6b49f3337709
+    container_name: jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/notebook
+    environment:
+      JUPYTER_ENV: development
+    
